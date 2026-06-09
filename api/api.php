@@ -9,7 +9,8 @@ $action = $_GET['action'] ?? '';
 
 switch ($action) {
 
-    // GET /api/api.php?action=listar_alunos
+
+
     case 'listar_alunos':
         $service = new AlunoService();
         $stmt    = $service->listar();
@@ -20,7 +21,8 @@ switch ($action) {
         echo json_encode(['sucesso' => true, 'dados' => $alunos]);
         break;
 
-    // GET /api/api.php?action=consultar_acesso&matricula=2024001
+
+        
     case 'consultar_acesso':
         $matricula = $_GET['matricula'] ?? '';
 

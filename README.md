@@ -15,6 +15,18 @@ com sistemas de catraca, plataformas de BI e sistemas acadêmicos institucionais
 - Driver Microsoft SQLSRV
 - Servidor web (Apache/Laragon/XAMPP)
 
+## Como executar
+
+1. Executar o script database.sql no SQL Server.
+2. Configurar os dados de conexão no arquivo conexao.php.
+3. Publicar os arquivos PHP no servidor web.
+4. Acessar o sistema pelo navegador.
+5. Utilizar as telas disponíveis:
+   - Cadastro de Alunos
+   - Listagem de Alunos
+   - Abertura de Solicitações
+   - Alteração de Status
+   - Consulta de Acesso
 
 ## Estrutura do banco
 
@@ -73,6 +85,13 @@ fn_dias_em_aberto
 Retorna a quantidade de dias em que uma solicitação permanece aberta,
 considerando a data de abertura e a data de fechamento (quando existir).
 
+## Regras de Negócio
+
+- Alunos com status INATIVO não podem abrir solicitações.
+- Solicitações FINALIZADAS não podem sofrer alterações.
+- Toda alteração de status gera registro em log.
+- O acesso acadêmico é liberado apenas para alunos ATIVOS sem pendências abertas.
+
 ## vw_status_academico
 
 Consolida informações acadêmicas dos alunos:
@@ -84,19 +103,6 @@ Consolida informações acadêmicas dos alunos:
 - Status do aluno
 - Possui pendências
 - Acesso liberado
-
-## Como executar
-
-1. Executar o script database.sql no SQL Server.
-2. Configurar os dados de conexão no arquivo conexao.php.
-3. Publicar os arquivos PHP no servidor web.
-4. Acessar o sistema pelo navegador.
-5. Utilizar as telas disponíveis:
-   - Cadastro de Alunos
-   - Listagem de Alunos
-   - Abertura de Solicitações
-   - Alteração de Status
-   - Consulta de Acesso
 
 ## Integração com (API, Catraca e BI):
 
