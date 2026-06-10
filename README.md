@@ -117,7 +117,7 @@ GET /api/api.php?action=listar_alunos
 
 Exemplo real:
 
-https://bravustecnologia.com.br/IESB/api/api.php?action=listar_alunos
+/IESB/api/api.php?action=listar_alunos
 
 Resposta:
 
@@ -128,7 +128,7 @@ Resposta:
       "id": 1,
       "matricula": "123456",
       "nome": "fernando galvao",
-      "cpf": "02135815314",
+      "cpf": "45678912345",
       "curso": "Engenharia de Software",
       "campus": "Sede Principal",
       "status": "ATIVO",
@@ -141,7 +141,7 @@ Resposta:
 
 Exemplo real:
 
-https://bravustecnologia.com.br/IESB/api/api.php?action=listar_alunos
+/IESB/api/api.php?action=listar_alunos
 
 Resposta:
 
